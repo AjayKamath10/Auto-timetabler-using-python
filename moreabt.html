@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+      
+  margin: 0;
+  font-size: 22px;
+  background-color: powderblue;
+}
+.header {
+  background-color: #2196F3;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #777;
+  font-size: 22px;
+}
+.nav li {
+  float: left;
+}
+.nav li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.nav li a:hover {
+  background-color: tomato;
+}
+.nav li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+.nav .current {
+  background-color: tomato;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-size: 22px;
+}
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 22px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.show {
+  display: block;
+}
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="nav"> 
+            <li><a href="main website.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="teachers.html">Teachers</a></li>
+            <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Help
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="doneby.html">Credits</a>
+    <a href="moreabt.html">About</a>
+    <a href="enduser.html">End User</a>
+  </div>
+  </div> 
+</div>	
+</header>
+<center><h1> About </h1></center>
+<p>Timetable scheduling is the process of creating timetables that fit the constraint of the scenario.
+It has various applications ranging from scheduling transportation and school timetables to creating complex schedules
+for highly optimized automated factories.
+Majority of small-scale scheduling are done manually while larger operations require computer assisted scheduling.
+There exist a lot of problem-solving methods, which typically use the concept of customary optimization algorithms
+such as Genetic Algorithms, Backtracking, Constraint Logic Programming. Newer methods like Genetic Algorithm, which mimics Natural Selection,
+and Tabu Search use Metaheuristic or Meta-strategy and Artificial Intelligence to solve the problem.
+Automated timetabling has become subject to multiple advanced research and there exists even a conference named
+The International Series of Conferences on the Practice and Theory of Automated Timetabling (PATAT) which is held biennially to serve as a forum for
+an international community of researchers, practitioners and vendors on all aspects of computer-aided timetable generation.
+Our project aims to achieve the goal of timetabling by a simpler algorithm with lesser constraints and more to do with our college's requirements. 
+</p>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>

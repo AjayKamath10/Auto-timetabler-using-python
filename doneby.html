@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #36364c;
+  margin: 0;
+  font-size: 22px;
+  background-color: powderblue;
+}
+.header {
+  background-color: #2196F3;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #777;
+  font-size: 22px;
+}
+.nav li {
+  float: left;
+}
+.nav li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.nav li a:hover {
+  background-color: tomato;
+}
+.nav li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+.nav .current {
+  background-color: tomato;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-size: 22px;
+}
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 22px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.show {
+  display: block;
+}
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="nav"> 
+            <li><a href="main website.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="teachers.html">Teachers</a></li>
+            <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Help
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="doneby.html">Credits</a>
+    <a href="moreabt.html">About</a>
+    <a href="enduser.html">End User</a>
+  </div>
+  </div> 
+</div>	
+</header>
+<center><h1> Credits </h1></center>
+<p>This project was developed by Ajay V Kamath, Akanksh P N and Abhishek Shankar of ISE 5 sem A section, 
+BMS Institute of Technology and Management, Yelahanka, Bengaluru. The creators have developed this project as part of the DBMS Mini Project
+prescribed in the syllabus by VTU. </p>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
